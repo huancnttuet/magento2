@@ -6,7 +6,8 @@ Follow from step 1 to step 5 : [https://www.mageplaza.com/devdocs/how-install-ma
 
 Step 6 : git clone 
 
-    clone repo to /var/www/html 
+    cd /var/www/html
+    git clone https://github.com/huancnttuet/magento2.git
 
 ```bash
 sudo chown -R www-data:www-data /var/www/html/magento2/
