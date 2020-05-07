@@ -30,3 +30,8 @@ Download magento2 with composer :
     username : 978037938a10c9d8856cf7e47cbf9497
     
     password : 97955d6e74e0a09e2ee789fd5f7e0c0f 
+
+admin 
+
+    username : admin
+    password : 1qaz2wsx3edc
