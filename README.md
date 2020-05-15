@@ -11,7 +11,7 @@ Step 6 : git clone
 
 ```bash
 sudo chown -R www-data:www-data /var/www/html/magento2/
-sudo chmod -R 755 /var/www/html/magento2/
+sudo chmod -R 777 /var/www/html/magento2/
 ```
 
 Step 7 : Install Magento2
