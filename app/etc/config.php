@@ -244,6 +244,7 @@ return [
         'MSP_TwoFactorAuth' => 1,
         'Module_Weather' => 1,
         'Sample_Module' => 1,
+        'THP_Chat' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
