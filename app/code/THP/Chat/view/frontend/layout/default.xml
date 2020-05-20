@@ -2,7 +2,7 @@
     <body>
         <referenceContainer name="content">
             <block class="THP\Chat\Block\FacebookMessenger" name="facebook.messenger" template="facebook/messenger.phtml" after="-" cacheable="false"/>
-            <block class="THP\Chat\Block\FacebookMessenger" name="tawk.to.widget" template="tawk-to/widget.phtml" after="facebook.messenger" cacheable="false"/>
+            <!-- <block class="THP\Chat\Block\FacebookMessenger" name="tawk.to.widget" template="tawk-to/widget.phtml" after="facebook.messenger" cacheable="false"/> -->
         </referenceContainer>
     </body>
 </page>
