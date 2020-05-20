@@ -35,3 +35,27 @@ admin
 
     username : admin
     password : 1qaz2wsx3edc
+
+-----------
+
+###Create a UI Component
+
+    php magento/bin module:enable <ComponentName>
+    php magento/bin setup:upgrade
+    
+    php bin/magento setup:di:compile
+
+####Error 
+500 in /var/log/apache2
+   
+   [link](https://magento.stackexchange.com/questions/104380/500-after-install-class-magento-framework-app-resourceconnection-proxy-does-no)
+
+find exception in folder /log 
+    
+    /log/exception.log
+
+
+clean cache
+    
+    rm -rf pub/static/*
+    php bin/magento cache:clean

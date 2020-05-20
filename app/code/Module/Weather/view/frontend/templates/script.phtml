@@ -1,0 +1,216 @@
+<?php
+
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Mateus\Novo\Model\Weather $weather_block */
+$weather_block = $block->getData("model");
+?>
+
+<h1>Test</h1>
+
+
+<?php
+   
+    $result = $weather_block->getWeatherResponse();
+
+    $daily = $result->daily;
+    $place = " Hà Nội";
+    $current_time = $daily[0]['dt'];
+?>
+
+
+
+<div class="agileits_w3layouts_main_grid_left">
+    <div class="wthree_main_grid <?php echo weather_bg_img($daily[0]['weather'][0]['main'])?>">
+        <div class="w3ls_main_grid">
+            <div class="agileits_main_grid_left">
+                <div class="agileits_main_grid_leftl">
+                    <h3><?php echo $daily[0]['temp']['day'] ?><span>°C</span></h3>
+                </div>
+                <div class="agileits_main_grid_leftr">
+                    <h4><?php echo $daily[0]['weather'][0]['description'] ?></h4>
+                    <p>Hôm nay ,  <?php echo $place ?></p>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="agileits_main_grid_right">
+                <p><?php echo rebuild_date("D, d/m/Y", $current_time); ?></p>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="w3l_main_grid_list">
+            <ul id="owl-demo" class="owl-carousel owl-theme">
+                <li><h4><?php echo rebuild_date("D", $daily[0]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[0]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[0]['temp']['min'] ?>° - <span><?php echo $daily[0]['temp']['max'] ?>°</span></h5>
+                </li>
+                <li><h4><?php echo rebuild_date("D", $daily[1]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[1]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[1]['temp']['min'] ?>° - <span><?php echo $daily[1]['temp']['max'] ?>°</span></h5>
+                </li>
+                <li><h4><?php echo rebuild_date("D", $daily[2]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[2]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[2]['temp']['min'] ?>° - <span><?php echo $daily[2]['temp']['max'] ?>°</span></h5>
+                </li>
+                <li><h4><?php echo rebuild_date("D", $daily[3]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[3]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[3]['temp']['min'] ?>° - <span><?php echo $daily[3]['temp']['max'] ?>°</span></h5>
+                </li>
+                <li><h4><?php echo rebuild_date("D", $daily[4]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[4]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[4]['temp']['min'] ?>° - <span><?php echo $daily[4]['temp']['max'] ?>°</span></h5>                
+                </li>
+                <li><h4><?php echo rebuild_date("D", $daily[5]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[5]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[5]['temp']['min'] ?>° - <span><?php echo $daily[5]['temp']['max'] ?>°</span></h5>
+                </li>
+                <li><h4><?php echo rebuild_date("D", $daily[6]['dt']); ?></h4>
+                    <div class="w3layouts_icon">
+                        <img src="<?php echo $this->getViewFileUrl(weather_img($daily[6]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
+                    </div>
+                    <h5><?php echo $daily[6]['temp']['min'] ?>° - <span><?php echo $daily[6]['temp']['max'] ?>°</span></h5>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+		
+
+
+<script type="text/javascript">
+    require(["jquery", "owlcarousel"],function($) {
+        $(document).ready(function() {
+            
+            $("#owl-demo,#owl-demo1,#owl-demo3,#owl-demo4").owlCarousel({ 
+			  autoPlay: 3000, //Set AutoPlay to 3 seconds
+		 
+			  items : 4,
+			  itemsDesktop : [768,3],
+			  itemsDesktopSmall : [414,2]
+		 
+			});
+        });
+    });
+</script>
+
+
+<?php
+function rebuild_date( $format, $time = 0 )
+{
+    if ( ! $time ) $time = time();
+
+	$lang = array();
+	$lang['sun'] = 'CN';
+	$lang['mon'] = 'T2';
+	$lang['tue'] = 'T3';
+	$lang['wed'] = 'T4';
+	$lang['thu'] = 'T5';
+	$lang['fri'] = 'T6';
+	$lang['sat'] = 'T7';
+	$lang['sunday'] = 'Chủ nhật';
+	$lang['monday'] = 'Thứ hai';
+	$lang['tuesday'] = 'Thứ ba';
+	$lang['wednesday'] = 'Thứ tư';
+	$lang['thursday'] = 'Thứ năm';
+	$lang['friday'] = 'Thứ sáu';
+	$lang['saturday'] = 'Thứ bảy';
+	$lang['january'] = 'Tháng Một';
+	$lang['february'] = 'Tháng Hai';
+	$lang['march'] = 'Tháng Ba';
+	$lang['april'] = 'Tháng Tư';
+	$lang['may'] = 'Tháng Năm';
+	$lang['june'] = 'Tháng Sáu';
+	$lang['july'] = 'Tháng Bảy';
+	$lang['august'] = 'Tháng Tám';
+	$lang['september'] = 'Tháng Chín';
+	$lang['october'] = 'Tháng Mười';
+	$lang['november'] = 'Tháng M. một';
+	$lang['december'] = 'Tháng M. hai';
+	$lang['jan'] = 'T01';
+	$lang['feb'] = 'T02';
+	$lang['mar'] = 'T03';
+	$lang['apr'] = 'T04';
+	$lang['may2'] = 'T05';
+	$lang['jun'] = 'T06';
+	$lang['jul'] = 'T07';
+	$lang['aug'] = 'T08';
+	$lang['sep'] = 'T09';
+	$lang['oct'] = 'T10';
+	$lang['nov'] = 'T11';
+	$lang['dec'] = 'T12';
+
+    $format = str_replace( "r", "D, d M Y H:i:s O", $format );
+    $format = str_replace( array( "D", "M" ), array( "[D]", "[M]" ), $format );
+    $return = date( $format, $time );
+
+    $replaces = array(
+        '/\[Sun\](\W|$)/' => $lang['sun'] . "$1",
+        '/\[Mon\](\W|$)/' => $lang['mon'] . "$1",
+        '/\[Tue\](\W|$)/' => $lang['tue'] . "$1",
+        '/\[Wed\](\W|$)/' => $lang['wed'] . "$1",
+        '/\[Thu\](\W|$)/' => $lang['thu'] . "$1",
+        '/\[Fri\](\W|$)/' => $lang['fri'] . "$1",
+        '/\[Sat\](\W|$)/' => $lang['sat'] . "$1",
+        '/\[Jan\](\W|$)/' => $lang['jan'] . "$1",
+        '/\[Feb\](\W|$)/' => $lang['feb'] . "$1",
+        '/\[Mar\](\W|$)/' => $lang['mar'] . "$1",
+        '/\[Apr\](\W|$)/' => $lang['apr'] . "$1",
+        '/\[May\](\W|$)/' => $lang['may2'] . "$1",
+        '/\[Jun\](\W|$)/' => $lang['jun'] . "$1",
+        '/\[Jul\](\W|$)/' => $lang['jul'] . "$1",
+        '/\[Aug\](\W|$)/' => $lang['aug'] . "$1",
+        '/\[Sep\](\W|$)/' => $lang['sep'] . "$1",
+        '/\[Oct\](\W|$)/' => $lang['oct'] . "$1",
+        '/\[Nov\](\W|$)/' => $lang['nov'] . "$1",
+        '/\[Dec\](\W|$)/' => $lang['dec'] . "$1",
+        '/Sunday(\W|$)/' => $lang['sunday'] . "$1",
+        '/Monday(\W|$)/' => $lang['monday'] . "$1",
+        '/Tuesday(\W|$)/' => $lang['tuesday'] . "$1",
+        '/Wednesday(\W|$)/' => $lang['wednesday'] . "$1",
+        '/Thursday(\W|$)/' => $lang['thursday'] . "$1",
+        '/Friday(\W|$)/' => $lang['friday'] . "$1",
+        '/Saturday(\W|$)/' => $lang['saturday'] . "$1",
+        '/January(\W|$)/' => $lang['january'] . "$1",
+        '/February(\W|$)/' => $lang['february'] . "$1",
+        '/March(\W|$)/' => $lang['march'] . "$1",
+        '/April(\W|$)/' => $lang['april'] . "$1",
+        '/May(\W|$)/' => $lang['may'] . "$1",
+        '/June(\W|$)/' => $lang['june'] . "$1",
+        '/July(\W|$)/' => $lang['july'] . "$1",
+        '/August(\W|$)/' => $lang['august'] . "$1",
+        '/September(\W|$)/' => $lang['september'] . "$1",
+        '/October(\W|$)/' => $lang['october'] . "$1",
+        '/November(\W|$)/' => $lang['november'] . "$1",
+        '/December(\W|$)/' => $lang['december'] . "$1" );
+
+    return preg_replace( array_keys( $replaces ), array_values( $replaces ), $return );
+}
+
+function weather_img($state){
+    if($state == "Rain")
+        return 'Module_Weather::images/3.png';
+    if($state == "Clouds")
+        return 'Module_Weather::images/2.png';
+    return 'Module_Weather::images/1.png';
+}
+
+function weather_bg_img($state){
+    if($state == "Rain")
+        return 'agileinfo_main_grid2';
+    if($state == "Clouds")
+        return 'agileinfo_main_grid1';
+    return 'agileinfo_main_grid';
+}
+
+?>
