@@ -5,9 +5,10 @@
         <script src="Sample_Module::js/component.js" />
     </head>
     <body>
-        <referenceContainer name="content">
+        <referenceContainer name="sidebar.additional">
             <block class="Magento\Framework\View\Element\Template" name="sample.module"
                    template="Sample_Module::script.phtml" />
         </referenceContainer>
+
     </body>
 </page>

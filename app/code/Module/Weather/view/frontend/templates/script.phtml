@@ -5,11 +5,8 @@
 $weather_block = $block->getData("model");
 ?>
 
-<h1>Test</h1>
-
-
 <?php
-   
+
     $result = $weather_block->getWeatherResponse();
 
     $daily = $result->daily;
@@ -19,7 +16,7 @@ $weather_block = $block->getData("model");
 
 
 
-<div class="agileits_w3layouts_main_grid_left">
+
     <div class="wthree_main_grid <?php echo weather_bg_img($daily[0]['weather'][0]['main'])?>">
         <div class="w3ls_main_grid">
             <div class="agileits_main_grid_left">
@@ -67,7 +64,7 @@ $weather_block = $block->getData("model");
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[4]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[4]['temp']['min'] ?>° - <span><?php echo $daily[4]['temp']['max'] ?>°</span></h5>                
+                    <h5><?php echo $daily[4]['temp']['min'] ?>° - <span><?php echo $daily[4]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[5]['dt']); ?></h4>
                     <div class="w3layouts_icon">
@@ -84,21 +81,21 @@ $weather_block = $block->getData("model");
             </ul>
         </div>
     </div>
-</div>
-		
+
+
 
 
 <script type="text/javascript">
     require(["jquery", "owlcarousel"],function($) {
         $(document).ready(function() {
-            
-            $("#owl-demo,#owl-demo1,#owl-demo3,#owl-demo4").owlCarousel({ 
+
+            $("#owl-demo,#owl-demo1,#owl-demo3,#owl-demo4").owlCarousel({
 			  autoPlay: 3000, //Set AutoPlay to 3 seconds
-		 
+
 			  items : 4,
 			  itemsDesktop : [768,3],
 			  itemsDesktopSmall : [414,2]
-		 
+
 			});
         });
     });

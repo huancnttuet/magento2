@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60c8f4758aeebb228b5907a43e279d42",
+    "content-hash": "329e92019cbea651fc7cb3760c54b747",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -1000,11 +1000,17 @@
         },
         {
             "name": "dotmailer/dotmailer-magento2-extension",
-            "version": "4.4.0",
+            "version": "4.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dotmailer/dotmailer-magento2-extension.git",
+                "reference": "e4b57cc3e51edf4e5b6a71da95b7031dd6abbe35"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/dotmailer/dotmailer-magento2-extension/dotmailer-dotmailer-magento2-extension-4.4.0.0.zip",
-                "shasum": "2ce54820044685bc127ec0c6bdc73d0c8c0984cd"
+                "url": "https://api.github.com/repos/dotmailer/dotmailer-magento2-extension/zipball/e4b57cc3e51edf4e5b6a71da95b7031dd6abbe35",
+                "reference": "e4b57cc3e51edf4e5b6a71da95b7031dd6abbe35",
+                "shasum": ""
             },
             "require": {
                 "magento/framework": ">=101 <103",
@@ -1051,10 +1057,12 @@
                     "Dotdigitalgroup\\Email\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "dotmailer integration for magento 2"
+            "description": "dotmailer integration for magento 2",
+            "time": "2020-04-07T15:58:22+00:00"
         },
         {
             "name": "dotmailer/dotmailer-magento2-extension-chat",
@@ -13644,6 +13652,83 @@
             "time": "2019-11-26T15:09:40+00:00"
         },
         {
+            "name": "mageplaza/magento-2-vietnamese-language-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-vietnamese-language-pack.git",
+                "reference": "1075e51dadf3290fb8e5be5368ffcf832b67f9f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-vietnamese-language-pack/zipball/1075e51dadf3290fb8e5be5368ffcf832b67f9f0",
+                "reference": "1075e51dadf3290fb8e5be5368ffcf832b67f9f0",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.3.13"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza team",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Vietnamese language package for Magento 2",
+            "homepage": "https://www.mageplaza.com",
+            "time": "2020-02-11T03:59:34+00:00"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "aa99d5aa974ec9bf799bcc9a2137095baf882093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/aa99d5aa974ec9bf799bcc9a2137095baf882093",
+                "reference": "aa99d5aa974ec9bf799bcc9a2137095baf882093",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "time": "2019-12-23T03:04:13+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.25.3",
             "source": {
@@ -21358,9 +21443,17 @@
             "time": "2016-07-21T11:18:01+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "4.4.0",
+            "alias_normalized": "4.4.0.0",
+            "version": "4.5.1.0",
+            "package": "dotmailer/dotmailer-magento2-extension"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mageplaza/magento-2-vietnamese-language-pack": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": false,

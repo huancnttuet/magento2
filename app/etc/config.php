@@ -235,6 +235,7 @@ return [
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,
         'Amazon_Payment' => 1,
+        'Api_Product' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
         'Klarna_Core' => 1,
@@ -242,12 +243,14 @@ return [
         'Klarna_Kp' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
+        'Mageplaza_Core' => 0,
         'Module_Weather' => 1,
         'Sample_Module' => 1,
         'THP_Chat' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
+        'Vnpayment_VNPAY' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];

@@ -11,7 +11,9 @@
         "sort-packages": true
     },
     "require": {
-        "magento/product-community-edition": "2.3.5-p1"
+        "dotmailer/dotmailer-magento2-extension": "4.5.1 as 4.4.0",
+        "magento/product-community-edition": "2.3.5-p1",
+        "mageplaza/magento-2-vietnamese-language-pack": "dev-master"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",

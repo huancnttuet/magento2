@@ -92,17 +92,13 @@ input[type="submit"],.agileits_copyright p a,a{
 	width:60%;
 	margin:0 auto;
 }
-.agileits_w3layouts_main_grid_left,.w3_agileits_main_grid_right{
-	width:48.3%;
-}
-.agileits_w3layouts_main_grid_left{
-	float:left;
-}
+
 .w3_agileits_main_grid_right{
 	float:right;
 	margin-left:2em;
 }
 .wthree_main_grid{
+    width: 400px;
 	padding:2em;
 }
 .agileinfo_main_grid{
@@ -186,7 +182,7 @@ input[type="submit"],.agileits_copyright p a,a{
 	color:#000;
 }
 .agileits_main_grid_right{
-	float:right;    
+	float:right;
 	margin: 1em 0 0;
 }
 .agileits_main_grid_right p{
@@ -258,6 +254,7 @@ input[type="submit"],.agileits_copyright p a,a{
 @media (max-width: 991px){
 	.wthree_main_grid {
 		padding: 1.5em;
+        width: 400px;
 	}
 	.agileits_main_grid_leftl h3 {
 		font-size: 2.5em;
@@ -295,6 +292,7 @@ input[type="submit"],.agileits_copyright p a,a{
 		font-size: 2.1em;
 	}
 	.wthree_main_grid {
+        width: 400px;
 		padding: 1em;
 	}
 }

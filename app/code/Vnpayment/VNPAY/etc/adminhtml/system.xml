@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="vnpay" translate="label" type="text"
+                   sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>VNPAY</label>
+                <field id="active" translate="label"
+                       type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="order_status" translate="label"
+                       type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>New Order Status</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status\NewStatus</source_model>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Title</label>
+                </field>
+                <field id="allowspecific" translate="label" type="allowspecific" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="51" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="model"></field>
+
+                <!--custom-->
+                <field id="payment_url" translate="label" type="text"
+                                       sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment URL</label>
+                </field>
+                <field id="tmn_code" translate="label" type="text"
+                       sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Terminal Code</label>
+                </field>
+                <field id="hash_code" translate="label" type="text"
+                       sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Hash Code</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
