@@ -79,4 +79,4 @@ API hiện thông tin chi tiết của sản phẩm thông qua ID
     
     http://localhost.com/rest/all/V1/productbyid/<:id>
  
-example : [http://localhost.com/rest/all/V1/productbyid/2][http://localhost.com/rest/all/V1/productbyid/2]
+example : [http://localhost.com/rest/all/V1/productbyid/2](http://localhost.com/rest/all/V1/productbyid/2)
