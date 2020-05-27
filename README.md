@@ -40,8 +40,8 @@ admin
 
 ### Create a UI Component
 
-    php magento/bin module:enable <ComponentName>
-    php magento/bin setup:upgrade
+    php bin/magento module:enable <ComponentName>
+    php bin/magento setup:upgrade
     
     php bin/magento setup:di:compile
 
