@@ -1,0 +1,68 @@
+//
+// Common
+// __________________________
+
+& when (@media-common = true) {
+    .logo {
+        position: absolute;
+        margin: 10px 0 0 0;
+        left: ~"calc(50% - 80px)";
+        top: 3px;
+        z-index: 6;
+
+        .page-print & {
+            display: inline-block;
+            float: none;
+        }
+    }
+}
+
+
+// Desktop
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen_m){
+    // Header
+    .page-header {
+        margin-bottom: 20px;
+    }
+    .logo {
+        margin: 10px 0 0 0;
+        position: absolute;
+        left: ~"calc(50% - 80px)";
+        top: 0;
+    }
+
+    .navigation > ul {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .cns-index-index{
+        .page-title-wrapper {
+            display: none;
+        }
+    }
+}
+
+//mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen_m){
+    // Header
+    .page-header {
+        margin-bottom: 20px;
+    }
+    .logo {
+        margin: 10px 0 0 0;
+        position: absolute;
+        left: ~"calc(50% - 80px)";
+        top: 0;
+    }
+
+    .navigation > ul {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .cns-index-index{
+        .page-title-wrapper {
+            display: none;
+        }
+    }
+}

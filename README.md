@@ -35,3 +35,48 @@ admin
 
     username : admin
     password : 1qaz2wsx3edc
+
+-----------
+
+### Create a UI Component
+
+    php bin/magento module:enable <ComponentName>
+    php bin/magento setup:upgrade
+    
+    php bin/magento setup:di:compile
+
+#### Error
+
+500 in /var/log/apache2
+   
+   [link](https://magento.stackexchange.com/questions/104380/500-after-install-class-magento-framework-app-resourceconnection-proxy-does-no)
+
+find exception in folder /log 
+    
+    /log/exception.log
+
+
+clean cache
+    
+    rm -rf pub/static/*
+    php bin/magento cache:clean
+    
+### Vietnamese Languague
+
+    php bin/magento setup:static-content:deploy vi_VN -f
+
+### VNpay
+    
+    /app/code/Vnpayment/VNPAY/readme.doc
+    
+### REST API
+    
+   http://<domain.com>/swagger
+   
+example : [http://localhost.com/swagger](http://localhost.com/swagger)
+   
+API hiện thông tin chi tiết của sản phẩm thông qua ID
+    
+    http://localhost.com/rest/all/V1/productbyid/<:id>
+ 
+example : [http://localhost.com/rest/all/V1/productbyid/2](http://localhost.com/rest/all/V1/productbyid/2)

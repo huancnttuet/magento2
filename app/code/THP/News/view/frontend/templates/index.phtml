@@ -33,15 +33,15 @@ echo $block->sayHello();
 
         for (var i = 0; i < data.length; i++) {
             var item = htmlToElement(
-                `<div class="item">`
-                +data[i].content.split("</a>")[0] + `</a>`
-                +`<div class = "main" >`
-                + `<div class = "title" >`+data[i].title+`</div>`
-                + `<p>`
-                +data[i].content.split("</a>")[1] 
-                + `<p>`
-                +`</div>`
-                +`</div>`
+                `<div class="item">` +
+                data[i].content.split("</a>")[0] + `</a>` +
+                `<div class = "main" >` +
+                `<div class = "title" >` + data[i].title + `</div>` +
+                `<p>` +
+                data[i].content.split("</a>")[1] +
+                `<p>` +
+                `</div>` +
+                `</div>`
             );
             content.appendChild(item);
         }
@@ -62,11 +62,16 @@ echo $block->sayHello();
 
     img {
         width: 137px;
-        max-width: unset!important;
+        max-width: unset !important;
     }
+
     .title {
-    font-weight: bold;
-    font-size: 1.6rem;
-    padding: 5px 0px 5px 0px;
-}
+        font-weight: bold;
+        font-size: 1.6rem;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .main {
+        padding: unset;
+    }
 </style>

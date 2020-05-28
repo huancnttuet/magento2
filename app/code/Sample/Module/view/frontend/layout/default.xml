@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Sample_Module::css/style.css" />
+        <script src="Sample_Module::js/component.js" />
+    </head>
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Framework\View\Element\Template" name="sample.module"
+                   template="Sample_Module::script.phtml" />
+        </referenceContainer>
+
+    </body>
+</page>
