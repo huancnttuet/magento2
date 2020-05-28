@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @var \THP\News\Block\Index $block
+ */
+
+echo $block->sayHello();
+
+?>
+
+<div id="content"></div>
+
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            addModule(JSON.parse(this.responseText).items);
+        }
+    };
+    xhttp.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=" + "https://vnexpress.net/rss/suc-khoe.rss", true);
+    xhttp.send();
+
+    function htmlToElement(html) {
+        var template = document.createElement('template');
+        html = html.trim(); // Never return a text node of whitespace as the result
+        template.innerHTML = html;
+        return template.content.firstChild;
+    }
+
+    function addModule(data) {
+
+        var content = document.getElementById("content");
+
+        for (var i = 0; i < data.length; i++) {
+            var item = htmlToElement(
+                `<div class="item">`
+                +data[i].content.split("</a>")[0] + `</a>`
+                +`<div class = "main" >`
+                + `<div class = "title" >`+data[i].title+`</div>`
+                + `<p>`
+                +data[i].content.split("</a>")[1] 
+                + `<p>`
+                +`</div>`
+                +`</div>`
+            );
+            content.appendChild(item);
+        }
+
+    }
+</script>
+
+<style>
+    .item {
+        display: flex;
+        border: 1px solid #9ea3a9;
+        margin: 10px;
+    }
+
+    a {
+        margin-right: 10px;
+    }
+
+    img {
+        width: 137px;
+        max-width: unset!important;
+    }
+    .title {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 5px 0px 5px 0px;
+}
+</style>
