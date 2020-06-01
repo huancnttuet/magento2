@@ -30,13 +30,14 @@ echo $block->sayHello();
     function addModule(data) {
 
         var content = document.getElementById("content");
+        console.log();
 
         for (var i = 0; i < data.length; i++) {
             var item = htmlToElement(
                 `<div class="item">` +
                 data[i].content.split("</a>")[0] + `</a>` +
                 `<div class = "main" >` +
-                `<div class = "title" >` + data[i].title + `</div>` +
+                `<a  href = ` + data[i].link + ` class = "title" >` + data[i].title + `</a>` +
                 `<p>` +
                 data[i].content.split("</a>")[1] +
                 `<p>` +
@@ -74,4 +75,9 @@ echo $block->sayHello();
     .main {
         padding: unset;
     }
+
+    a.title:hover {
+        text-decoration: underline;
+    }
+
 </style>
