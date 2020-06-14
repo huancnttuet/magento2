@@ -62,4 +62,12 @@ class ProductBy
  {
    return $this->productRepository->getById($id);
  }
+
+ /**
+  * {@inheritdoc}
+  */
+  public function getProductBySku($sku)
+  {
+    return $this->productRepository->get($sku);
+  }
 }

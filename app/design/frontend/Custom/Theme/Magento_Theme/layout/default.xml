@@ -4,11 +4,11 @@
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo.png</argument>
                 <argument name="logo_alt" xsi:type="string">Món ăn của người Việt</argument>
-                <argument name="logo_img_width" xsi:type="number">200</argument>
-                <argument name="logo_img_height" xsi:type="number">90</argument>
+                <argument name="logo_width" xsi:type="number">30</argument>
+                <argument name="logo_height" xsi:type="number">30</argument>
             </arguments>
         </referenceBlock>
-<!--        <referenceBlock name="catalog.topnav" remove="true" />-->
-<!--        <referenceBlock name="navigation.sections" remove="true" />-->
+        <!--        <referenceBlock name="catalog.topnav" remove="true" />-->
+        <!--        <referenceBlock name="navigation.sections" remove="true" />-->
     </body>
 </page>

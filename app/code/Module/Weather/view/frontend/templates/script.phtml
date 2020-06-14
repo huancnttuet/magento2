@@ -16,7 +16,7 @@ $weather_block = $block->getData("model");
 
 
 
-
+    <div style="font-size : xx-large; margin: 20px 0px 20px 0px;">Thời tiết</div>
     <div class="wthree_main_grid <?php echo weather_bg_img($daily[0]['weather'][0]['main'])?>">
         <div class="w3ls_main_grid">
             <div class="agileits_main_grid_left">
@@ -40,43 +40,43 @@ $weather_block = $block->getData("model");
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[0]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[0]['temp']['min'] ?>° - <span><?php echo $daily[0]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[0]['temp']['min'] ?>°  <span><?php echo $daily[0]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[1]['dt']); ?></h4>
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[1]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[1]['temp']['min'] ?>° - <span><?php echo $daily[1]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[1]['temp']['min'] ?>°  <span><?php echo $daily[1]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[2]['dt']); ?></h4>
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[2]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[2]['temp']['min'] ?>° - <span><?php echo $daily[2]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[2]['temp']['min'] ?>°  <span><?php echo $daily[2]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[3]['dt']); ?></h4>
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[3]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[3]['temp']['min'] ?>° - <span><?php echo $daily[3]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[3]['temp']['min'] ?>°  <span><?php echo $daily[3]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[4]['dt']); ?></h4>
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[4]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[4]['temp']['min'] ?>° - <span><?php echo $daily[4]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[4]['temp']['min'] ?>°  <span><?php echo $daily[4]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[5]['dt']); ?></h4>
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[5]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[5]['temp']['min'] ?>° - <span><?php echo $daily[5]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[5]['temp']['min'] ?>°  <span><?php echo $daily[5]['temp']['max'] ?>°</span></h5>
                 </li>
                 <li><h4><?php echo rebuild_date("D", $daily[6]['dt']); ?></h4>
                     <div class="w3layouts_icon">
                         <img src="<?php echo $this->getViewFileUrl(weather_img($daily[6]['weather'][0]['main'])); ?>" alt=" " class="w3_img_responsive" />
                     </div>
-                    <h5><?php echo $daily[6]['temp']['min'] ?>° - <span><?php echo $daily[6]['temp']['max'] ?>°</span></h5>
+                    <h5><?php echo $daily[6]['temp']['min'] ?>°  <span><?php echo $daily[6]['temp']['max'] ?>°</span></h5>
                 </li>
             </ul>
         </div>

@@ -29,15 +29,15 @@
     function addModule(data) {
 
         var content = document.getElementById("content");
-        console.log();
+        content.appendChild(htmlToElement(`<div class='dmphuc3'>Tin tức hàng ngày</div>`))
 
         for (var i = 0; i < data.length; i++) {
             var item = htmlToElement(
-                `<div class="item">` +
-                data[i].content.split("</a>")[0] + `</a>` +
-                `<div class = "main" >` +
-                `<a  href = ` + data[i].link + ` class = "title" >` + data[i].title + `</a>` +
-                `<p>` +
+                `<div class="itemhfix">`  +
+                    `<a href=${data[i].link}><img class='dmphuc' src=${data[i].thumbnail} /></a>`  +
+                `<div class = "maincc" >` +
+                `<a  href = ` + data[i].link + ` class = "titlecc" >` + data[i].title + `</a>` +
+                `<p class='dmphuc2'>` +
                 data[i].content.split("</a>")[1] +
                 `<p>` +
                 `</div>` +
@@ -50,32 +50,45 @@
 </script>
 
 <style>
-    .item {
-        display: flex;
-        border: 1px solid #9ea3a9;
-        margin: 10px;
+.page-title-wrapper {
+    display: none;
+}
+    .dmphuc {
+        height : 200px;
+        width : auto;
+        max-width: 300px;
     }
 
+    .dmphuc3 {
+        font-size : 40px;
+    }
+
+    .itemhfix {
+        display: flex;
+        
+        margin: 30px;
+    }
     a {
         margin-right: 10px;
     }
 
-    img {
-        width: 137px;
-        max-width: unset !important;
-    }
-
-    .title {
+    
+    .titlecc {
         font-weight: bold;
         font-size: 1.6rem;
         padding: 5px 0px 5px 0px;
     }
 
-    .main {
-        padding: unset;
+    .dmphuc2 {
+        margin-top: 30px;
     }
 
-    a.title:hover {
+    .maincc {
+        padding: unset;
+        margin : 10px 0px 10px 50px;
+    }
+
+    a.titlecc:hover {
         text-decoration: underline;
     }
 

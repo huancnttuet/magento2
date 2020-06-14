@@ -13,5 +13,12 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
+    <route url="/V1/productbysku/:sku" method="GET">
+        <service class="Api\Product\Api\ProductByInterface" method="getProductBySku"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
 
 </routes>

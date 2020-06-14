@@ -22,4 +22,15 @@ interface ProductByInterface
   * @throws \Magento\Framework\Exception\NoSuchEntityException
   */
  public function getProductById($id);
+ 
+/**
+  * GET product identified by its sku
+  *
+  * @api
+  * @param string $sku
+  * @return \Magento\Catalog\Api\Data\ProductInterface
+  * @throws \Magento\Framework\Exception\NoSuchEntityException
+  */
+  public function getProductBySku($sku);
+
 }
